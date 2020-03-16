@@ -4,8 +4,8 @@ import {
   EnhancerResult,
   DependencyList,
   generateConditionCode,
+  REACT,
 } from '@truefit/bach';
-import {useCallback} from 'react';
 import {useFocusEffect} from '@react-navigation/native';
 
 export default <T>(fn: (t: T | undefined) => unknown, conditions?: DependencyList<T>) => ({
@@ -16,16 +16,15 @@ export default <T>(fn: (t: T | undefined) => unknown, conditions?: DependencyLis
 
   return {
     dependencies: {
-      useCallback,
       useFocusEffect,
       [fnName]: fn,
     },
     initialize: `
-      useEffect(function () {
-        useCallback(function() {
+      useFocusEffect(
+        ${REACT}.useCallback(function() {
           return ${fnName}(${PROPS});
-        }, [${conditionCode}]);
-      });`,
-    props: [fnName],
+        }, [${conditionCode}])
+      );`,
+    props: [],
   };
 };

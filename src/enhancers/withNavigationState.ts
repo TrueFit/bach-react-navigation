@@ -1,7 +1,8 @@
 import {EnhancerContext, EnhancerResult} from '@truefit/bach';
 import {useNavigationState} from '@react-navigation/native';
+import {NavigationState} from '@react-navigation/routers';
 
-export default <T, S, V>(selectorName: keyof T, selector: (s: S) => V) => ({
+export default <T>(selectorName: keyof T, selector: (state: NavigationState) => unknown) => ({
   generateNewVariable,
 }: EnhancerContext): EnhancerResult => {
   const selectorAlias = generateNewVariable();

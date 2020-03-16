@@ -1,0 +1,57 @@
+{
+  "name": "@truefit/bach-react-navigation",
+  "version": "2.0.0",
+  "description": "connect your composed components to react-navigation",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "format": "prettier --write **/*.{js,ts,tsx,json}",
+    "lint": "eslint src/**/*.ts",
+    "clean-build": "rm -rf ./build",
+    "compile": "tsc -p .",
+    "build": "yarn format && yarn lint && yarn clean-build && yarn compile",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:TrueFit/bach-react-navigation.git"
+  },
+  "authors": [
+    "jgretz",
+    "adamkirkton"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TrueFit/bach-react-navigation/issues"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "homepage": "https://github.com/TrueFit/bach-react-navigation#readme",
+  "peerDependencies": {
+    "@react-navigation/core": "^5.x",
+    "@react-navigation/native": "^5.x",
+    "@truefit/bach": "^2.x",
+    "react": "^16.x"
+  },
+  "devDependencies": {
+    "@react-navigation/core": "^5.2.2",
+    "@react-navigation/native": "^5.0.10",
+    "@truefit/bach": "^2.0.1",
+    "@types/node": "^13.9.1",
+    "@types/react": "^16.9.23",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript-prettier": "^1.4.2",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}

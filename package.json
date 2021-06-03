@@ -1,6 +1,6 @@
 {
   "name": "@truefit/bach-react-navigation",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "connect your composed components to react-navigation",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,12 +29,12 @@
   ],
   "homepage": "https://github.com/TrueFit/bach-react-navigation#readme",
   "peerDependencies": {
-    "@react-navigation/core": "^5.x",
-    "@react-navigation/native": "^5.x",
-    "@react-navigation/routers": "^5.x",
-    "@truefit/bach": "^2.x",
-    "react": "^16.x",
-    "react-native": "^0.63.x"
+    "@react-navigation/core": "5.x",
+    "@react-navigation/native": "5.x",
+    "@react-navigation/routers": "5.x",
+    "@truefit/bach": "2.x",
+    "react": "16.x",
+    "react-native": "0.63.x"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
